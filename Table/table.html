@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiplication Table</title>
+<script src="script.js"></script>
+
+<style>
+body{
+    background-color: darkkhaki;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+    color: #333;
+}
+
+h3{
+    color: #444;
+}
+
+input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+button{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e6e6e6; /* light gray */
+    color: #333;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #cccccc;
+}
+
+#result{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #444;
+    font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+<center>
+    <br><br>
+<h1>Multiplication Table</h1>
+<br><br>
+<h3>Enter a number:</h3>
+<input type="number" id="num">
+
+<button onclick="printTable()">Show Table</button>
+
+<p id="result"></p>
+</center>
+
+</body>
+</html>

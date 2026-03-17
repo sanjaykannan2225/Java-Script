@@ -1,20 +1,31 @@
-function validateForm()
-{
-var name = document.getElementById("name").value;
-var email = document.getElementById("email").value;
+function validateForm() {
 
-if(name == "")
-{
-document.getElementById("msg").innerHTML = "Name cannot be empty";
-return false;
-}
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
 
-if(email == "")
-{
-document.getElementById("msg").innerHTML = "Email cannot be empty";
-return false;
-}
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
 
-document.getElementById("msg").innerHTML = "Form submitted successfully";
-return true;
+    nameError.innerHTML = "";
+    emailError.innerHTML = "";
+
+    let isValid = true;
+
+    // Name validation
+    let namePattern = /^[A-Za-z]+$/;
+
+    if (!name.match(namePattern)) {
+        nameError.innerHTML = "⚠️ Name should contain only letters";
+        isValid = false;
+    }
+
+    // Email validation
+    let emailPattern = /^[a-z0-9@.]+$/;
+
+    if (!email.match(emailPattern)) {
+        emailError.innerHTML = "⚠️ Email should be small letters & digits only";
+        isValid = false;
+    }
+
+    return isValid;
 }
